@@ -24,11 +24,48 @@
     @*<link href="css/styles.css" rel="stylesheet" />*@
     <link href="~/Theme/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        .blink-dot-offline {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  animation: blink 1.5s infinite;
+}
+        .blink-dot-online {
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            animation: blink 2.5s linear infinite alternate 2.5s;
+        }
+
+@@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+    </style>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">ASPION DASHBOARD</a>
+        <a class="navbar-brand ps-3" href="index.html">DASHBOARD</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -139,6 +176,9 @@
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-black stretched-link" href="#">View Details</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <div class="small text-white" style="position: absolute; top: 260px; right: 20px;">
+                                        <div class="blink-dot-online"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -151,6 +191,9 @@
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-black stretched-link" href="#">View Details</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <div class="small text-white" style="position: absolute; top: 260px; right: 20px;">
+                                        <div class="blink-dot-offline"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +205,9 @@
                                 <div class="card-body bg-white text-black">&#9207;Min: 2.4 °C - &#9206;Max: 7.2 °C</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-black stretched-link" href="#">View Details</a>
-                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <div class="small text-white" style="position: absolute; top: 260px; right: 20px;">
+                                        <div class="blink-dot-online"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -228,6 +273,8 @@
     <script src="~/Theme/assets/demo/datatables-demo.js"></script>
 
     @*/Scripts/DashBoard.js file must be imported to get real time data. *@
+
+
     <script src="~/Scripts/DashBoard.js"></script>
     <script type="text/javascript">
         console.log("1")

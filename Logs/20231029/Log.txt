@@ -1,0 +1,2 @@
+2023-10-29 18:03.16.20  [Info]    APIController > SendDataToServer : Received data from C01A , Temp:5 , Hum:90 | Average Temp: 5 | List1 Count:1 | List1 Last Item:5 | List1 First Item:5
+2023-10-29 22:32.15.38  [Info]    APIController > SendDataToServer : Received data from C01A , Temp:5 , Hum:90 | Average Temp: 5 | List1 Count:1 | List1 Last Item:5 | List1 First Item:5

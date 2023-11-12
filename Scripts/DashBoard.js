@@ -1,7 +1,7 @@
 ﻿function GetRealtimeValues() {
-    var url = '/dashboardapi/GetRealTimeValue';
+    var url = '/dash/dashboardapi/GetRealTimeValue';
     
-    console.log("GetRealtimeValues Callled");
+    console.log("GetRealtimeValues Callled -");
     $.getJSON(url, function (data) {
 
         var count = data.Result.length;
